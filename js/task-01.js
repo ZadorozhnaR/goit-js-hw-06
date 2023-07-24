@@ -4,12 +4,11 @@ console.log(`Number of categories : ${categoriesUl.length}`);
 const categoriesParent = document.querySelector("#categories");
 const categoriesIt = categoriesParent.querySelectorAll("#categories .item");
 
-const categoriesList = [];
 categoriesIt.forEach((element) => {
-  categoriesList.push(
-    `Category: ${element.querySelector("h2").textContent} Elements: ${
-      element.querySelector("ul").children.length
-    }`
-  );
+  const listCategory = `Category: ${element.querySelector("h2").textContent}`;
+  const listElements = `Elements: ${
+    element.querySelector("ul").children.length
+  }`;
+  console.log(listCategory);
+  console.log(listElements);
 });
-console.log(categoriesList.join("; "));
